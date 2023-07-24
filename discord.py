@@ -7,14 +7,14 @@ end = 0
 
 def clear():
     global end
-    coord = pc.locateOnScreen('src/target.png', confidence=0.7)
+    coord = pc.locateOnScreen('src/target.png', confidence=0.95)
     if coord:
             end = 0
             pc.rightClick(coord[0:2])
             with pc.hold('shift'):
                 return pc.click(pc.locateCenterOnScreen('src/delete.png', grayscale=True))
     pc.press('pageup')
-    pc.scrollUp(50)
+    pc.scroll(50)
     end += 1
 
 
