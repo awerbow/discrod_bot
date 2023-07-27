@@ -14,7 +14,7 @@ def clear():
             with pc.hold('shift'):
                 return pc.click(pc.locateCenterOnScreen('src/delete.png', grayscale=True))
     pc.press('pageup')
-    pc.scroll(50)
+    pc.scroll(1000)
     end += 1
 
 
